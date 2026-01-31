@@ -23,6 +23,9 @@
   "dependencies": {
     "@all-in-one-water-manager/env": "workspace:*",
     "dotenv": "catalog:",
+    "groq-sdk": "^0.37.0",
+    "react-markdown": "^10.1.0",
+    "recharts": "^3.7.0",
     "zod": "catalog:"
   },
   "devDependencies": {
