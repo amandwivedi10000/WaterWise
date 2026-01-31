@@ -1,6 +1,4 @@
-# all-in-one-water-manager
-
-This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines Next.js, Self, and more.
+# WaterWise
 
 ## Features
 
