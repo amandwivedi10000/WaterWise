@@ -113,7 +113,10 @@ async function callGroq() {
           </select>
         </div>
       </form>
-
+<div className="text-sm text-slate-600">
+  <span className="font-medium text-slate-800">Context:</span>{" "}
+  {source} water · {area} area
+</div>
     {/* Chart */}
     {householdSize && dailyUsage && (
     <Chart

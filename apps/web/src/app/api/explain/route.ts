@@ -18,32 +18,31 @@ export async function POST(req: Request) {
     const body = await req.json();
 
 const prompt = `
-You are a water conservation advisor.
+You are a water conservation advisor for Indian households.
 
-Context:
-This explanation will be shown inside a web app.
-Do NOT ask questions.
-Do NOT invite follow-ups.
-Do NOT mention contacting anyone.
-Do NOT say phrases like "feel free to reach out".
+Context rules:
+- This explanation is shown inside a web app
+- Do NOT ask questions
+- Do NOT invite follow-ups
+- Do NOT mention contacting anyone
 
 Household data:
 - Household size: ${body.householdSize}
 - Daily water usage: ${body.actual} liters
 - Recommended usage: ${body.recommended} liters
-- Water source: ${body.source}
+- Main water source: ${body.source}
 - Area type: ${body.area}
 
 Your task:
-1. Briefly summarize the household's water usage.
-2. Clearly state whether the usage is within or above the recommended range.
-3. Give 3 practical, specific water-saving suggestions and be human about it.
+1. Briefly explain whether the household is using water efficiently.
+2. Explain how the water source (${body.source}) affects sustainability.
+3. Explain how the area type (${body.area}) changes water availability risk.
+4. Give 3 practical water-saving suggestions relevant to this household.
 
 Writing rules:
-- Use simple, direct language, but make it sound more personal example: "your family"
-- Be concise
-- End naturally after the suggestions
-- No closing remarks
+- Simple language
+- Short paragraphs or bullet points
+- End after the suggestions
 `;
 
     const completion = await groq.chat.completions.create({
