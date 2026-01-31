@@ -140,7 +140,6 @@ async function callGroq() {
         <div className="bg-gray-100 p-4 rounded-md">
           <h3 className="font-medium mb-2">AI Explanation</h3>
     <div className="bg-gray-50 p-4 rounded-md">
-  <h3 className="font-medium mb-2">AI Explanation</h3>
 
   <ReactMarkdown>
     {aiText}
