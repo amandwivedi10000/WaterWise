@@ -1,4 +1,4 @@
-# all-in-one-water-manager
+# WaterWise
 
 ## Features
 
